@@ -8,7 +8,7 @@ import api from "../devjss.json";
 const VeriFy = () => {
   const [RndCode, SetRndCOde] = useState();
   const [CountBad, SetCountBad] = useState(0);
-
+  const p2e = (s) => s.replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
   const params = useParams();
   const navigate = useNavigate();
   const PostData = (e) => {
@@ -32,7 +32,9 @@ const VeriFy = () => {
     const cookies = new Cookies();
     cookies.set("Lgn", respons, { path: "/" });
     const ck = cookies.get("Lgn");
-    ck === "Error" ? SetCountBad(CountBad + 1) : (window.location.href = `/`);
+    ck === "Error"
+      ? SetCountBad(CountBad + 1)
+      : (window.location.href = `/main`);
 
     CountBad > 1 ? navigate("/Register/") : null;
   };
@@ -47,7 +49,7 @@ const VeriFy = () => {
         placeholder="کد پیامک شده "
         className="border p-2 text-right"
         onChange={(e) => {
-          SetRndCOde(e.target.value);
+          SetRndCOde(p2e(e.target.value));
         }}
         name="Verify"
       />
@@ -61,5 +63,4 @@ const VeriFy = () => {
     </div>
   );
 };
-
 export default VeriFy;

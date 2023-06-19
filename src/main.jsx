@@ -13,10 +13,16 @@ import VeriFy from "./component/Verify";
 import Wallet from "./component/Wallet";
 import WalletRoute from "./component/Header";
 import Footer from "./component/footer";
-
+import Home from "./component/home";
+import Ath from "./component/athur";
+import Report from "./component/report";
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/main",
     element: <App />,
   },
   {
@@ -42,6 +48,14 @@ const router = createBrowserRouter([
   {
     path: "Wallet/:id",
     element: <WalletRoute />,
+  },
+  {
+    path: "pay",
+    element: <Ath />,
+  },
+  {
+    path: "Report/:status",
+    element: <Report />,
   },
 ]);
 

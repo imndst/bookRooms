@@ -8,7 +8,7 @@ const WalletRoute = () => {
   return (
     <div
       style={{ fontFamily: "danamedium" }}
-      className="flex justify-between py-5 bg-gray-700 text-white text-center px-4"
+      className="flex justify-between py-5 bg-[#164e63] text-white text-center px-4"
     >
       {cokn == null ||
         (cokn !== "Error" && (
@@ -45,6 +45,9 @@ const WalletRoute = () => {
           خروج{" "}
         </button>
       )}
+      <a href="https://golshanonline.ir/main" className="block  rounded p-2 ">
+        Home
+      </a>
     </div>
   );
 };

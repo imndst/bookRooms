@@ -22,10 +22,10 @@ const GetDate = () => {
     });
   }, []);
 
-  //   if (!cookies.get("Lgn")) {
-  //     navigate("/");
-  //     return;
-  //   }
+  if (!cookies.get("Lgn")) {
+    navigate("/");
+    return;
+  }
 
   const PostData = (hash, id) => {
     axios({
@@ -75,7 +75,7 @@ const GetDate = () => {
 
         return (
           <div
-            className="block  m-auto w-64 bg-teal-500 text-white item-center mt-2 p-8 rounded text-center  m-auto"
+            className="block  m-auto w-64 border-[#6ee7b7] border-2 text-white item-center mt-2 p-8 rounded text-center  m-auto"
             key={i}
           >
             <div>{item.overideTitle}</div>
