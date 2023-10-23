@@ -19,18 +19,14 @@ const About = () => {
           left: `${offset}%`,
           transition: "left 15s ease-in-out",
         }}
-      >
-        hiiiiiiiiii
-      </div>
+      ></div>
       <div
         style={{
           position: "absolute",
           left: `${offset}%`,
           transition: "left 17s ",
         }}
-      >
-        hiiiiiiiiii
-      </div>
+      ></div>
 
       <div className="grid gap-4 items-center h-36">
         <div className="flex gap-2 justify-start items-center">
