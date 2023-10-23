@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Cookies from "universal-cookie";
 import axios from "axios";

@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Navigate, useParams } from "react-router-dom";
-import Cookies from "universal-cookie";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import api from "../devjss.json";
 const Wallet = () => {
   const [myWallet, SetMyWallet] = useState([{}]);
   const params = useParams();
-  const ReadData = () => {};
   const navigate = useNavigate();
 
   useEffect(() => {
